@@ -19,7 +19,8 @@ function onSubmit(event) {
   if (email.value === "" || password.value === "") {
     alert("Please fill in all the fields!");
   } else {
-    // console.log(`Email: ${email.value}, Password: ${password.value}`);
+    console.log(`Email: ${email.value}, Password: ${password.value}`);
     event.currentTarget.reset();
   }
 }
+// Завдання 8 - при сабміті в консолі має бути обʼєкт з введеними в поля значеннями.

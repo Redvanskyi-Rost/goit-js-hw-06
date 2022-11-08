@@ -14,7 +14,9 @@
 // }
 
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
 
 const changeBtn = document.querySelector(".change-color");
@@ -22,6 +24,9 @@ const randColor = document.querySelector(".color");
 const body = document.querySelector("body");
 
 changeBtn.addEventListener("click", () => {
-  body.style.background = getRandomHexColor();
-  randColor.textContent = getRandomHexColor();
+  let newColor = getRandomHexColor();
+  body.style.backgroundColor = newColor;
+  randColor.textContent = newColor;
 });
+
+// Задання 9 - не співпадає фон боді з текстовим контентом спана.
